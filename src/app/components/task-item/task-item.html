@@ -1,1 +1,9 @@
-<p>task-item works!</p>
+<div class="task-row">
+  <span [class.completed]="task().completed">
+    {{ task().title }}
+  </span>
+
+  <button (click)="toggleRequested.emit(task().id)">
+    {{ task().completed ? 'Desmarcar' : 'Completar' }}
+  </button>
+</div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
+import { Task } from '../../Models/task.model';
 
 @Component({
   selector: 'app-task-item',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './task-item.css',
 })
 export class TaskItem {
+  task = input.required<Task>();
 
+  toggleRequested = output<number>();
 }
