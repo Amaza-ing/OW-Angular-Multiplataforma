@@ -1,1 +1,9 @@
-<p>task-form works!</p>
+<section class="card">
+  <h2>Nueva Tarea</h2>
+
+  <div class="form-row">
+    <input type="text" [(ngModel)]="title" placeholder="Escribe una Tarea" />
+
+    <button (click)="addTask()">Añadir</button>
+  </div>
+</section>
