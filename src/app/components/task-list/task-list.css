@@ -5,6 +5,18 @@
   background: #fff;
 }
 
+.header {
+  margin-bottom: 1rem;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: #666;
+  font-size: 0.95rem;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -12,11 +24,7 @@ ul {
 }
 
 li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px solid #eee;
 }
 

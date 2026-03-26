@@ -1,6 +1,6 @@
-import { Component, input, output } from '@angular/core';
-import { Task } from '../../Models/task.model';
-import { TaskItem } from "../task-item/task-item";
+import { Component, inject } from '@angular/core';
+import { TaskItem } from '../task-item/task-item';
+import { TaskStoreService } from '../../services/task-store.service';
 
 @Component({
   selector: 'app-task-list',
@@ -9,7 +9,5 @@ import { TaskItem } from "../task-item/task-item";
   styleUrl: './task-list.css',
 })
 export class TaskList {
-  tasks = input.required<Task[]>();
-
-  taskToggled = output<number>();
+  taskStore = inject(TaskStoreService);
 }

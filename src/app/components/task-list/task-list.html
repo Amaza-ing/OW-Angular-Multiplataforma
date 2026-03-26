@@ -1,10 +1,18 @@
 <section class="card">
-  <h2>Lista de tareas</h2>
+  <div class="header">
+    <h2>Lista de tareas</h2>
+
+    <div class="stats">
+      <span>Total: {{ taskStore.totalTasks() }}</span>
+      <span>Completadas: {{ taskStore.completedTasks() }}</span>
+      <span>Pendientes: {{ taskStore.pendingTasks() }}</span>
+    </div>
+  </div>
 
   <ul>
-    @for (task of tasks(); track task.id) {
+    @for (task of taskStore.tasks(); track task.id) {
       <li>
-        <app-task-item [task]="task" (toggleRequested)="taskToggled.emit($event)"> </app-task-item>
+        <app-task-item [task]="task"> </app-task-item>
       </li>
     }
   </ul>
