@@ -1,7 +1,18 @@
 <main class="container">
-  <h1>Angular Multiplataforma</h1>
-  <p class="subtitle">Base de la aplicación para web, móvil y desktop</p>
+  <header class="header">
+    <h1>Angular Multiplataforma</h1>
+    <p class="subtitle">Base de la aplicación para web, móvil y desktop</p>
 
-  <app-task-form></app-task-form>
-  <app-task-list></app-task-list>
+    <nav class="nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Inicio
+      </a>
+      <a routerLink="/tasks" routerLinkActive="active"> Tareas </a>
+      <a routerLink="/about" routerLinkActive="active"> Acerca de </a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
 </main>
