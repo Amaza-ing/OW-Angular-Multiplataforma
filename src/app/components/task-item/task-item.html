@@ -3,7 +3,7 @@
     {{ task().title }}
   </span>
 
-  <button (click)="toggleRequested.emit(task().id)">
+  <button (click)="toggleTask()">
     {{ task().completed ? 'Desmarcar' : 'Completar' }}
   </button>
 </div>

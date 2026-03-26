@@ -1,5 +1,6 @@
-import { Component, input, output } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Task } from '../../Models/task.model';
+import { TaskStoreService } from '../../services/task-store.service';
 
 @Component({
   selector: 'app-task-item',
@@ -8,7 +9,11 @@ import { Task } from '../../Models/task.model';
   styleUrl: './task-item.css',
 })
 export class TaskItem {
+  private taskStore = inject(TaskStoreService);
+
   task = input.required<Task>();
 
-  toggleRequested = output<number>();
+  toggleTask(): void {
+    this.taskStore.toggleTask(this.task().id);
+  }
 }
