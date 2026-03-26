@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { Task } from '../Models/task.model';
 
 @Injectable({
@@ -20,7 +20,16 @@ export class TaskStoreService {
     },
   ]);
 
+  totalTasks = computed(() => this.tasks().length);
+
+  completedTasks = computed(() => this.tasks().filter((task) => task.completed).length);
+
+  pendingTasks = computed(() => this.totalTasks() - this.completedTasks());
+
   addTask(title: string): void {
+    const cleanTitle = title.trim();
+    if (!cleanTitle) return;
+
     const newTask: Task = {
       id: this.nextId++,
       title,
