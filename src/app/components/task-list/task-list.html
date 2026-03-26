@@ -1,1 +1,15 @@
-<p>task-list works!</p>
+<section class="card">
+  <h2>Lista de tareas</h2>
+
+  <ul>
+    @for (task of taskService.tasks(); track task.id) {
+      <li>
+        <span [class.completed]="task.completed">{{ task.title }}</span>
+      </li>
+
+      <button (click)="taskService.toggleTask(task.id)">
+        {{ task.completed ? 'Desmarcar' : 'Completar' }}
+      </button>
+    }
+  </ul>
+</section>
