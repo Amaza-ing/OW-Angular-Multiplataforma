@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
 const isDev = !app.isPackaged;
@@ -8,6 +8,7 @@ function createWindow() {
     width: 1200,
     height: 800,
     webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
       nodeIntegration: false,
     },
@@ -19,6 +20,10 @@ function createWindow() {
     win.loadFile(path.join(__dirname, '../dist/angular-multiplataforma/browser/index.html'));
   }
 }
+
+ipcMain.handle('get-platform', () => {
+  return process.platform;
+});
 
 app.whenReady().then(() => {
   createWindow();
