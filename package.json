@@ -1,12 +1,16 @@
 {
   "name": "angular-multiplataforma",
   "version": "0.0.0",
+  "main": "electron/main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "electron": "electron .",
+    "desktop": "concurrently -k \"ng serve\" \"wait-on http://localhost:4200 && electron .\"",
+    "desktop:build": "ng build && electron ."
   },
   "prettier": {
     "printWidth": 100,
