@@ -1,3 +1,5 @@
+// npm install --save-dev electron@latest concurrently wait-on
+
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
