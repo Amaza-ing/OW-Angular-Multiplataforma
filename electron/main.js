@@ -1,3 +1,6 @@
+// npm install --save-dev @electron-forge/cli
+// npx electron-forge import
+
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
