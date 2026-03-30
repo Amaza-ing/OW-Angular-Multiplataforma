@@ -4,4 +4,8 @@
   <p>En la sección de tareas podemos gestionar el estado global de la app.</p>
 
   <a class="button-link" routerLink="/tasks">Ir a tareas</a>
+
+  <p>Sistema operativo: {{ platform() }}</p>
+
+  <button (click)="loadPlatform()">Obtener plataforma</button>
 </section>
