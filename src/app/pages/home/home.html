@@ -1,7 +1,15 @@
-<section class="card">
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
   <h2>Bienvenido</h2>
   <p>Esta es la base de nuestra aplicación Angular multiplataforma.</p>
   <p>En la sección de tareas podemos gestionar el estado global de la app.</p>
 
-  <a class="button-link" routerLink="/tasks">Ir a tareas</a>
-</section>
+  <ion-button expand="block" routerLink="/tasks">
+    Ir a Tareas
+  </ion-button>
+</ion-content>
