@@ -8,8 +8,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.css',
 })
 export class Home {
-  constructor(private ngZone: NgZone) {}
-
   platform = signal('Desconocido');
 
   async loadPlatform() {
