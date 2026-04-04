@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import { TaskForm } from "../../components/task-form/task-form";
-import { TaskList } from "../../components/task-list/task-list";
-import { IonHeader, IonToolbar, IonContent } from "@ionic/angular/standalone";
+import { IonContent } from '@ionic/angular/standalone';
+import { MobileHeader } from "../../components/mobile-header/mobile-header";
 
 @Component({
   selector: 'app-tasks-page',
-  imports: [TaskForm, TaskList, IonHeader, IonToolbar, IonContent],
+  imports: [IonContent, MobileHeader],
   templateUrl: './tasks-page.html',
   styleUrl: './tasks-page.css',
 })
-export class TasksPage {
-
-}
+export class TasksPage {}

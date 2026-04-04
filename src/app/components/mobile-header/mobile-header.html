@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Angular Multiplataforma</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Inicio
+      </ion-button>
+
+      <ion-button routerLink="/tasks" routerLinkActive="active"> Tareas </ion-button>
+
+      <ion-button routerLink="/about" routerLinkActive="active"> Acerca de Nosotros </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

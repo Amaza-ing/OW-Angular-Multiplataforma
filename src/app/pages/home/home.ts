@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/angular/standalone';
+import { RouterLink } from '@angular/router';
+import { IonContent, IonButton } from '@ionic/angular/standalone';
+import { MobileHeader } from "../../components/mobile-header/mobile-header";
 
 @Component({
   selector: 'app-home',
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton],
+  imports: [IonContent, IonButton, RouterLink, MobileHeader],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
