@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { Device } from '@capacitor/device';
 import { MobileHeader } from "../../components/mobile-header/mobile-header";
-import { IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonList, IonItem } from "@ionic/angular/standalone";
+import { IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonList, IonItem, IonLabel } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-device-info',
-  imports: [MobileHeader, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonList, IonItem],
+  imports: [MobileHeader, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonList, IonItem, IonLabel],
   templateUrl: './device-info.html',
   styleUrl: './device-info.css',
 })
