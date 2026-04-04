@@ -10,8 +10,8 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/tasks-page/tasks-page').then((m) => m.TasksPage),
   },
   {
-    path: 'about',
-    loadComponent: () => import('./pages/about/about').then((m) => m.About),
+    path: 'device',
+    loadComponent: () => import('./pages/device-info/device-info').then((m) => m.DeviceInfo),
   },
   {
     path: '**',
