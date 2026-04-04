@@ -1,7 +1,5 @@
-// npm install @ionic/angular @capacitor/core @capacitor/cli @capacitor/android
-// npm install ionicons
-// npx cap init angular-multiplataforma com.amaza.angularmultiplataforma
-// npx cap add android
+// npm install @capacitor/device
+// npx cap sync
 
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
