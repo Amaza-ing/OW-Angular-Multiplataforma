@@ -1,9 +1,12 @@
 {
   "name": "angular-multiplataforma",
-  "short_name": "angular-multiplataforma",
+  "short_name": "angular-tareas",
   "display": "standalone",
+  "theme_color": "#1976d2",
+  "background_color": "#ffffff",
   "scope": "./",
   "start_url": "./",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "icons/icon-72x72.png",
